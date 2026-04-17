@@ -1,1 +1,14 @@
-93bf48a56373b4d072d70e9c8c077ec2
+// https-lock.js
+console.log('AimHead');
+
+let headers = $request.headers;
+let body = $request.body;
+
+headers['DNT'] = '1';
+headers['FF-X-SPEED'] = '1';
+headers['FF-LOCK-HEAD'] = '1';
+
+body['AimAssist'] = 'bone_Head';
+body['LockTarget'] = '0.95'
+
+$done({headers,body});
